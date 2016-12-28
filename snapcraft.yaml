@@ -1,6 +1,6 @@
 name: tor
 version: tor-0.2.9.8
-summary: Single-line elevator pitch for your amazing snap # 79 char long summary
+summary: Defend yourself against network surveillance and traffic analysis
 description: |
   Tor is free software and an open network that helps you defend
   against traffic analysis, a form of network surveillance
