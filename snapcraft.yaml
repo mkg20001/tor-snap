@@ -1,0 +1,38 @@
+name: tor
+version: tor-0.2.9.8
+summary: Single-line elevator pitch for your amazing snap # 79 char long summary
+description: |
+  Tor is free software and an open network that helps you defend
+  against traffic analysis, a form of network surveillance
+  that threatens personal freedom and privacy, confidential
+  business activities and relationships, and state security.
+
+grade: stable
+confinement: strict
+
+apps:
+  tor:
+    command: bin/tor
+    plugs: [network,network-bind]
+  gencert:
+    command: bin/tor-gencert
+  resolve:
+    command: bin/tor-resolve
+    plugs: [network]
+  torify:
+    command: bin/torify
+    plugs: [network,network-bind]
+
+parts:
+  tor:
+    source: https://git.torproject.org/tor.git
+    source-tag: tor-0.2.9.8
+    source-type: git
+    plugin: autotools
+    configflags: [--disable-asciidoc]
+    build-packages:
+      - git
+      - build-essential
+      - automake
+      - libevent-dev
+      - libssl-dev
