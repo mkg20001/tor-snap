@@ -3,3 +3,4 @@ prime/
 stage/
 *.snap
 deploy.sh
+*.tar.bz2
