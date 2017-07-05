@@ -2,5 +2,6 @@ parts/
 prime/
 stage/
 *.snap
-deploy.sh
 *.tar.bz2
+*.sh
+snap/.snapcraft

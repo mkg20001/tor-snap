@@ -1,5 +1,5 @@
 name: tor
-version: tor-0.2.9.8
+version: tor-0.3.0.9
 summary: Defend yourself against network surveillance and traffic analysis
 description: |
   Tor is free software and an open network that helps you defend
@@ -14,19 +14,25 @@ apps:
   tor:
     command: bin/tor
     plugs: [network,network-bind]
+    aliases:
+      - tor
   gencert:
     command: bin/tor-gencert
   resolve:
     command: bin/tor-resolve
     plugs: [network]
+    aliases:
+      - tor-resolve
   torify:
     command: bin/torify
     plugs: [network,network-bind]
+    aliases:
+      - torify
 
 parts:
   tor:
     source: https://git.torproject.org/tor.git
-    source-tag: tor-0.2.9.8
+    source-tag: tor-0.3.0.9
     source-type: git
     plugin: autotools
     configflags: [--disable-asciidoc]
