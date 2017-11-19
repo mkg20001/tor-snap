@@ -32,7 +32,7 @@ apps:
 parts:
   tor:
     source: https://git.torproject.org/tor.git
-    source-tag: tor-0.3.0.9
+    source-tag: tor-0.3.1.8
     source-type: git
     plugin: autotools
     configflags: [--disable-asciidoc]
