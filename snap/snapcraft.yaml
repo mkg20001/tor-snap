@@ -1,5 +1,5 @@
 name: tor-mkg20001
-version: tor-0.3.1.8
+version: tor-0.4.1.6
 summary: Defend yourself against network surveillance and traffic analysis
 description: |
   Tor is free software and an open network that helps you defend
@@ -32,7 +32,7 @@ apps:
 parts:
   tor:
     source: https://git.torproject.org/tor.git
-    source-tag: tor-0.3.1.8
+    source-tag: tor-0.4.1.6
     source-type: git
     plugin: autotools
     configflags: [--disable-asciidoc]
